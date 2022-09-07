@@ -1,5 +1,5 @@
 canvas = document.getElementById('myCanvas');
-ctx = canvas.getContext('2d');
+ctx = canvas.getContext("2d");
 
 img_width = 300;
 img_height = 100;
@@ -32,23 +32,24 @@ function my_keydown(e) {
         alphabetkey();
         document.getElementById("d1").innerHTML = "You pressed alphabet key";
         console.log("alphabet key");
-
+    } else if (keyPressed >= 48 && keyPressed <= 57) {
         numberkey();
         document.getElementById("d1").innerHTML = "You pressed number key";
         console.log("number key");
-
+    } else if (keyPressed >= 37 && keyPressed <= 40) {
         arrowkey();
         document.getElementById("d1").innerHTML = "You pressed arrow key";
         console.log("arrow key");
-
+    } else if ((keyPressed == 17) || (keyPressed == 18 || keyPressed == 27)) {
         spacialkey();
         document.getElementById("d1").innerHTML = "You pressed spacial key";
         console.log("spacial key");
-
+    } else {
         otherkey();
         document.getElementById("d1").innerHTML = "You pressed other key";
         console.log("other key");
     }
+
 }
 
 function alphabetkey() {
